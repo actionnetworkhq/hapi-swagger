@@ -14,6 +14,7 @@
 
 -   `jsonPath`: (string) The path of the JSON endpoint that describes the API - default: `/swagger.json`
 -   `jsonRoutePath`: (string) The path for the controller that serves the JSON that describes the API. If jsonPath is specified and this parameter is not, it will take jsonPath value. Useful when behind a reverse proxy - default: `/swagger.json`
+-   `jsonFilePath`: (string) The path to store the JSON within the file system. If provided, the JSON will not be cached within memory and will only be generated the first time it is requested.
 -   `basePath`: (string) The base path from where the API starts i.e. `/v2/` (note, needs to start with `/`) - default: `/`
 -   `pathPrefixSize`: (number) Selects what segment of the URL path is used to group endpoints - default: `1`
 -   `pathReplacements` : (array) methods for modifying path and group names in documentation - default: `[]`
