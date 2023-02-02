@@ -28,7 +28,7 @@ lab.experiment('documentation-route-plugins', () => {
           expect(route.settings.plugins).to.equal(plugins);
           break;
         case '/swagger.json':
-          expect(route.settings.plugins).to.equal({ 'hapi-swagger': false });
+          expect(route.settings.plugins).to.equal({ [Helper.pkg]: false });
           break;
         case '/swaggerui/extend.js':
         case '/swaggerui/{path*}':

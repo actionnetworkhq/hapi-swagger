@@ -38,7 +38,7 @@ lab.experiment('security', () => {
       options: {
         handler: Helper.defaultHandler,
         plugins: {
-          'hapi-swagger': {
+          [Helper.pkg]: {
             payloadType: 'form',
             security: [{ api_key: [] }]
           }
@@ -59,7 +59,7 @@ lab.experiment('security', () => {
       options: {
         handler: Helper.defaultHandler,
         plugins: {
-          'hapi-swagger': {
+          [Helper.pkg]: {
             payloadType: 'form',
             security: [
               {

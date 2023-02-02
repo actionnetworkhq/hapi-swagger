@@ -40,7 +40,7 @@ lab.experiment('plugin', () => {
       server.route(routes);
       await server.start();
     } catch (err) {
-      expect(err.message).to.equal('Plugin hapi-swagger missing dependency @hapi/vision');
+      expect(err.message).to.equal(`Plugin ${Helper.pkg} missing dependency @hapi/vision`);
     }
   });
 
@@ -51,7 +51,7 @@ lab.experiment('plugin', () => {
       server.route(routes);
       await server.start();
     } catch (err) {
-      expect(err.message).to.equal('Plugin hapi-swagger missing dependency @hapi/inert');
+      expect(err.message).to.equal(`Plugin ${Helper.pkg} missing dependency @hapi/inert`);
     }
   });
 
@@ -482,7 +482,7 @@ lab.experiment('plugin', () => {
           handler: Helper.defaultHandler,
           tags: ['api'],
           plugins: {
-            'hapi-swagger': {
+            [Helper.pkg]: {
               'x-meta': {
                 test1: true,
                 test2: 'test',
@@ -515,7 +515,7 @@ lab.experiment('plugin', () => {
           handler: Helper.defaultHandler,
           tags: ['api'],
           plugins: {
-            'hapi-swagger': {
+            [Helper.pkg]: {
               'x-code-samples': {
                 lang: 'JavaScript',
                 source: 'console.log("Hello World");'

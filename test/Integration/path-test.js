@@ -66,7 +66,7 @@ lab.experiment('path', () => {
   lab.test('route settting of consumes produces', async () => {
     const testRoutes = Hoek.clone(routes);
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         consumes: ['application/x-www-form-urlencoded'],
         produces: ['application/json', 'application/xml']
       }
@@ -89,7 +89,7 @@ lab.experiment('path', () => {
 
     const testRoutes = Hoek.clone(routes);
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         consumes: ['application/x-www-form-urlencoded'],
         produces: ['application/json', 'application/xml']
       }
@@ -107,7 +107,7 @@ lab.experiment('path', () => {
   lab.test('auto "x-www-form-urlencoded" consumes with payloadType', async () => {
     const testRoutes = Hoek.clone(routes);
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         payloadType: 'form'
       }
     };
@@ -123,7 +123,7 @@ lab.experiment('path', () => {
   lab.test('rename a parameter', async () => {
     const testRoutes = Hoek.clone(routes);
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         payloadType: 'form'
       }
     };
@@ -148,7 +148,7 @@ lab.experiment('path', () => {
   lab.test('auto "multipart/form-data" consumes with { swaggerType: "file" }', async () => {
     const testRoutes = Hoek.clone(routes);
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         payloadType: 'form'
       }
     };
@@ -177,7 +177,7 @@ lab.experiment('path', () => {
     };
 
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         consumes: ['multipart/form-data']
       }
     };
@@ -197,7 +197,7 @@ lab.experiment('path', () => {
       })
     }),
       (testRoutes.options.plugins = {
-        'hapi-swagger': {
+        [Helper.pkg]: {
           consumes: ['application/x-www-form-urlencoded']
         }
       });
@@ -225,7 +225,7 @@ lab.experiment('path', () => {
   lab.test('payloadType form', async () => {
     const testRoutes = Hoek.clone(routes);
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         payloadType: 'form'
       }
     };
@@ -498,7 +498,7 @@ lab.experiment('path', () => {
   lab.test('route deprecated', async () => {
     const testRoutes = Hoek.clone(routes);
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         deprecated: true
       }
     };
@@ -514,7 +514,7 @@ lab.experiment('path', () => {
   lab.test('custom operationId for code-gen apps', async () => {
     const testRoutes = Hoek.clone(routes);
     testRoutes.options.plugins = {
-      'hapi-swagger': {
+      [Helper.pkg]: {
         id: 'add'
       }
     };
@@ -602,7 +602,7 @@ lab.experiment('path', () => {
           payload: Joi.object()
         },
         plugins: {
-          'hapi-swagger': {
+          [Helper.pkg]: {
             payloadType: 'form'
           }
         }

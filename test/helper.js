@@ -5,6 +5,7 @@ const Boom = require('@hapi/boom');
 const Inert = require('@hapi/inert');
 const Vision = require('@hapi/vision');
 const Wreck = require('@hapi/wreck');
+const Pack = require('../package.json');
 const HapiSwagger = require('../lib/index.js');
 
 const helper = (module.exports = {});
@@ -250,3 +251,5 @@ helper.getAssetsPaths = (html) => {
       return assetPath;
     });
 };
+
+helper.pkg = Pack.name;

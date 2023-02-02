@@ -158,7 +158,7 @@ lab.experiment('proxies', () => {
       options: {
         tags: ['api'],
         plugins: {
-          'hapi-swagger': {
+          [Helper.pkg]: {
             nickname: 'microformatsapi',
             validate: {
               payload: Joi.object({
@@ -227,7 +227,7 @@ lab.experiment('proxies', () => {
       options: {
         tags: ['api'],
         plugins: {
-          'hapi-swagger': {
+          [Helper.pkg]: {
             id: 'microformatsapi',
             validate: {
               payload: Joi.object({
@@ -272,7 +272,7 @@ lab.experiment('proxies', () => {
         options: {
           tags: ['api'],
           plugins: {
-            'hapi-swagger': {
+            [Helper.pkg]: {
               id: 'microformatsapi1',
               validate: {
                 payload: Joi.object({
@@ -298,7 +298,7 @@ lab.experiment('proxies', () => {
         options: {
           tags: ['api'],
           plugins: {
-            'hapi-swagger': {
+            [Helper.pkg]: {
               id: 'microformatsapi2',
               validate: {
                 payload: Joi.object({
@@ -345,7 +345,7 @@ lab.experiment('proxies', () => {
         options: {
           tags: ['api'],
           plugins: {
-            'hapi-swagger': {
+            [Helper.pkg]: {
               id: 'microformatsapi1',
               validate: {
                 payload: Joi.object({
@@ -371,7 +371,7 @@ lab.experiment('proxies', () => {
         options: {
           tags: ['api'],
           plugins: {
-            'hapi-swagger': {
+            [Helper.pkg]: {
               id: 'microformatsapi2',
               validate: {
                 payload: Joi.object({

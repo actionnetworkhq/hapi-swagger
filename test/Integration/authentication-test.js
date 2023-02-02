@@ -26,7 +26,7 @@ lab.experiment('default `auth` settings', () => {
         auth: 'jwt',
         tags: ['api'],
         plugins: {
-          'hapi-swagger': {
+          [Helper.pkg]: {
             security: [{ jwt: [] }]
           }
         },
@@ -71,7 +71,7 @@ lab.experiment('authentication', () => {
     options: {
       handler: Helper.defaultAuthHandler,
       plugins: {
-        'hapi-swagger': {
+        [Helper.pkg]: {
           payloadType: 'form'
         }
       },
